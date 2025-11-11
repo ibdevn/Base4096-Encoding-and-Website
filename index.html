@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Base4096 Verschlüsselung</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔐 Base4096 Verschlüsselung</h1>
+      <label for="modeToggle">Dark Mode/Light Mode</label>
+      <label class="theme-switch">
+        <input type="checkbox" id="modeToggle" />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <p>Wandle Text in Emojis um – oder dekodiere zurück!</p>
+
+    <label for="input">🔤 Eingabe:</label>
+    <textarea id="input" placeholder="Text hier eingeben..."></textarea>
+
+    <div class="buttons">
+      <button onclick="encode()">Encodieren</button>
+      <button onclick="decode()">Decodieren</button>
+    </div>
+
+    <label for="output">📤 Ausgabe:</label>
+    <textarea id="output" placeholder="Ergebnis erscheint hier..." readonly></textarea>
+
+    <footer>
+      <p>Made with ❤️ by CARLO</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
