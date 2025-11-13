@@ -58,7 +58,7 @@ label {
 }
 
 textarea {
-  width: 100%;
+  width: calc(100% - 2em);
   height: 150px;
   padding: 1em;
   margin-top: 0.5em;
@@ -145,4 +145,5 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(24px);
+
 }
