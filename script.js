@@ -2,6 +2,9 @@ let pyodide;
 
 async function loadPyodideAndPackages() {
   // Lade Pyodide
+  // Deaktiviere encode/decode Buttons bis Pyodide geladen ist
+  document.getElementById("encodeBtn").disabled = true;
+  document.getElementById("decodeBtn").disabled = true;
   pyodide = await loadPyodide();
 
   // Lade encoder.py
@@ -16,6 +19,8 @@ async function loadPyodideAndPackages() {
 
   // Initialisiere die Tabelle in Python
   await pyodide.runPythonAsync("init_table()");
+  document.getElementById("encodeBtn").disabled = false;
+  document.getElementById("decodeBtn").disabled = false;
 }
 
 // Starte alles beim Laden der Seite
